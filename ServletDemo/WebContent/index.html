@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My ServletDemo</title>
+</head>
+<body>
+Hello, this is my ServletDemo!<br/>
+<hr>
+覆盖doGet和doPost的Demo：<br/>	
+	<!-- 一定不要忘记项目名称前面的"/" -->
+	<form action="/ServletDemo/BServlet" method="post">
+		<input type="submit" value="提交" />
+	</form>
+<hr>
+测试防盗链的Demo：<br>
+<a href="/ServletDemo/antiTheftChainServlet">goto antiTheftChainServlet</a>
+<hr>
+<form action="/ServletDemo/getParaServlet" method="post">
+测试接受Post参数的Demo：<br>
+账号：<input type="text" name="username"/><br>
+密码：<input type="password" name="password"/><br>
+爱好：<input type="checkbox" name="game kind" value="play video games" />玩主机游戏
+<input type="checkbox" name="game kind" value="play PC games" />玩电脑游戏
+<input type="checkbox" name="game kind" value="play phone games" />玩手机游戏<br>
+<input type="submit" value="提交" />
+</form>
+</body>
+</html>
