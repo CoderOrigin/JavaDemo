@@ -1,12 +1,1 @@
-/baseServlet/
-/getParameterDemo/
-/getRequestInfoDemo/
-/initChildServletDemo/
-/lifePeriodDemo/
-/overrideDoGetAndDoPostDemo/
-/reDirectDemo/
-/requestDispatchDemo/
-/responseBytesDemo/
-/servletConfigDemo/
-/servletContextDemo/
-/visitorCountDemo/
+/urlServlet/
