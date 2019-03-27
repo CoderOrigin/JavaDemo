@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    					http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- bean definitions here -->
+    <!-- demo -->
+	<bean id="demoService" class="spring.demo.demoservice.DemoService"></bean>
+	<bean id="demoDao" class="spring.demo.demodao.DemoDao"></bean>
+	
+	<!-- 模拟静态工厂创建bean -->
+	<!-- 使用“DemoFactory”这个类的“getDemoDao”方法来创建一个对象，id为“staticDemoDao”，存入容器-->
+	<bean id="staticDemoDao" class="spring.demo.factory.StaticFactory" factory-method="getDemoDao"></bean>
+	
+	<!-- 模拟实例工厂创建bean -->
+	<!-- 先创建一个工厂实例，然后调用该工厂实例 -->
+	<bean id="instanceFactory" class="spring.demo.factory.InstanceFactory"></bean>
+	<bean id="instanceDemoDao" factory-bean="instanceFactory" factory-method="getDemoDao"></bean>
+	
+	 
+	<!-- IOCdemo -->
+	<bean id="userServiceImpl1" class="spring.IOCdemo.userservice.impl.UserServiceImpl1">
+		<property name="userDao1" ref="userDaoImpl1"></property>
+	</bean>
+	
+	<bean id="userServiceImpl2" class="spring.IOCdemo.userservice.impl.UserServiceImpl2"></bean>
+	
+	<!-- impl1实现连接一个数据库的一张表 mydb1 -->
+	<bean id="userDaoImpl1" class="spring.IOCdemo.userdao.impl.UserDaoImpl1">
+		<property name="jdbcarg" >
+			<map>
+				<entry key="driver" value="com.mysql.jdbc.Driver"></entry>
+				<entry key="url" value="jdbc:mysql://localhost:3306/mydb1"></entry>
+				<entry key="user" value="root"></entry>
+				<entry key="password" value="123456"></entry>
+			</map>
+		</property>
+	</bean>
+	
+	<!-- impl1实现连接一个数据库的一张表 iris-->
+	<bean id="userDaoImpl2" class="spring.IOCdemo.userdao.impl.UserDaoImpl2"></bean>
+	
+</beans>
