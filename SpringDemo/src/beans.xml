@@ -29,7 +29,7 @@
 	<bean id="userDaoImpl1" class="spring.IOCdemo.userdao.impl.UserDaoImpl1">
 		<property name="jdbcarg" >
 			<map>
-				<entry key="driver" value="com.mysql.jdbc.Driver"></entry>
+				<entry key="driver" value="com.mysql.cj.jdbc.Driver"></entry>
 				<entry key="url" value="jdbc:mysql://localhost:3306/mydb1"></entry>
 				<entry key="user" value="root"></entry>
 				<entry key="password" value="123456"></entry>
