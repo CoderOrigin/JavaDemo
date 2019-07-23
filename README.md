@@ -1,2 +1,2 @@
-# JavaWebDemo
-学习JavaWeb时候写过的一些Demo
+# JavaDemo
+学习Java时候写过的一些Demo
