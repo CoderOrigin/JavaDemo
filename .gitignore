@@ -6,8 +6,9 @@
 
 .settings
 
-*/bin/*
-*/build/*
+**/bin/*
+**/build/*
+**/classes/*
 # jar 包
 *.jar
 
@@ -22,9 +23,8 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
-.gitignore
 
-*/.idea/*
+**/.idea/*
 vcs.xml
 
 ## File-based project format:
@@ -35,10 +35,10 @@ vcs.xml
 ## Plugin-specific files:
 
 # IntelliJ
-*/out/*
+**/out/*
 
 # mpeltonen/sbt-idea plugin
-*/.idea_modules/*
+**/.idea_modules/*
 
 # JIRA plugin
 atlassian-ide-plugin.xml
