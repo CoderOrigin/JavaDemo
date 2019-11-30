@@ -2,6 +2,10 @@ package threadtest;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.locks.ReentrantLock;
 
 import concurrency.ConcurrencyTest;
 
@@ -12,6 +16,15 @@ public class ThreadTest extends Thread{
 	}
 	
 	public static void main(String[] args) throws Exception {
+
+		Timer timer = new Timer();
+		timer.schedule(new TimerTask() {
+			@Override
+			public void run() {
+		return;
+			}
+		}, new Date());
+		ReentrantLock lock = new ReentrantLock();
 		// Runnable r = new ThreadTest();
 		Thread r1 = new ThreadTest();
 		Thread r2 = new ThreadTest();
